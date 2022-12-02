@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Canvas Coordinates</title>
+</head>
+<body>
+    
+    <script src="/js/index.js" type="module"></script>
+    
+    <!--PÁGINA MAIN-->
+    <div class="main" id="main">
+        <div class="canvas_container" id="container">
+            <canvas id="canvas" ></canvas>
+            <div class="inputform">
+                <div class="imagehandler" >
+                    <img src="/images/camera.png" alt="camera" >
+                </div>
+                <input type="text" placeholder="Name" class="name">
+            </div>
+            <script src="/js/script.js"></script>
+        </div>
+        <div class="user">
+            <button class="logIn" id="logIn">LogIn</button>
+            <button class="register" id="register">Register</button>
+            <script>
+                document.getElementById('register').onclick = function (){
+                    const m = document.getElementById("main");
+                    m.style.display = "none";
+                    const reg = document.getElementById("registro");
+                    reg.style.display = "flex";
+                }
+            </script>
+        </div>
+    </div>
+    <div class="registro" id="registro">
+        <div class="formularioregistro">
+            <input type="text" placeholder="E-mail -> cristiangontri@gmail.com" class="email">
+        <input type="text" placeholder="Password" class="pswd">
+        <div class="buttons">
+            <button class="send">SEND</button>
+            <button class="back" id="back">GO BACK</button>
+            <script>
+                    document.getElementById('back').onclick = function (){
+                        const reg = document.getElementById("registro");
+                        reg.style.display = "none";
+                        const m = document.getElementById("main");
+                        m.style.display = "flex";
+                    }
+            </script>
+        </div>
+        </div>
+        
+    </div>
+
+    
+
+    
+    
+    
+</body>
+</html>
